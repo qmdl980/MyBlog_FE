@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import './pages/Home'
+import Home from './pages/Home';
+import Layout from './components/Layout';
+
 
 function App() {
   return (
-    <div className="App">
-      <div>hello world</div>
-    </div>
+    <Layout>
+      <Home></Home>
+    </Layout>
   );
 }
 
