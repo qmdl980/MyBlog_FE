@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "one-pop";
+  src: url(./fonts/one-pop.ttf);
+}
+@font-face {
+  font-family: "one-title";
+  src: url(./fonts/one-title.ttf);
+}

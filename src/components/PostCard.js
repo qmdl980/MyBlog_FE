@@ -1,5 +1,4 @@
-
-const PostCard = props => {
+function PostCard() {
     return(
         <div>포스트카드</div>
     )

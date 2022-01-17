@@ -1,12 +1,12 @@
 import '../components/PostCard'
 import PostCard from '../components/PostCard'
 
-function Home() {
+function Project() {
     return(
         <div>
-            <div>홈 화면입니다</div>
+            <div>프로젝트 화면입니다</div>
             <PostCard></PostCard>
         </div>
     )
 }
-export default Home
+export default Project
