@@ -1,6 +1,9 @@
 function PostCard() {
     return(
-        <div>포스트카드</div>
+        <div>
+            <div>포스트카드</div>
+            <image></image>
+        </div>
     )
 }
 export default PostCard
