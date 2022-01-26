@@ -11,7 +11,6 @@ const titleData = [
     }
 ]
 
-
 function Home() {
     return (
         <div style={{ display: 'flex', margin: '80px 0 0 100px' }}>
