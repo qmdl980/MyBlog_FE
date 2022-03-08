@@ -45,3 +45,17 @@
   font-family: "one-title";
   src: url(./fonts/one-title.ttf);
 }
+
+.content-wrap{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.article{
+  display: flex;
+  max-width: 1080px;
+  margin: 0 40px;
+  flex-wrap: wrap;
+  float: left;
+}

@@ -1,6 +1,14 @@
 .header{
+    position:relative;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.header-inner{
     display: flex;
-    z-index:999;
+    width: 1080px;
+    flex-wrap: wrap;
+    float: left;
     background-color: aliceblue;
 }
 
