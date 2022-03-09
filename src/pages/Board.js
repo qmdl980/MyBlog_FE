@@ -1,11 +1,11 @@
 import "../App.css"
 
 
-function Board(props) {
+function Board() {
     return(
-        <div>
-            <div>{props.title}</div>
-            <div>{props.content}</div>
+        <div className={"content-wrap"}>
+            <div>{this.props.title}</div>
+            <div>{this.props.text}</div>
         </div>
     )
 }

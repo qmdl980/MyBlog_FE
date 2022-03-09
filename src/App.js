@@ -2,7 +2,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './pages/Home'
 import Home from './pages/Home';
-import Project from './pages/Project'
+import Project from './pages/Project';
+import Board from './pages/Board';
 import Layout from './components/Layout';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
@@ -42,6 +43,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home boardData={boardData}/>} exact/>
                     <Route path="/project" element={<Project boardData={boardData}/>} exact/>
+                    <Route path="/:id" element={<Board/>}/>
                 </Routes>
             </Layout>
         </Router>
