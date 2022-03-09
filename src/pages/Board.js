@@ -1,11 +1,16 @@
 import "../App.css"
+import {useLocation} from "react-router-dom";
+import {useState} from "react";
+
+function Board(props) {
+
+    const state = useLocation().state
 
 
-function Board() {
     return(
         <div className={"content-wrap"}>
-            <div>{this.props.title}</div>
-            <div>{this.props.text}</div>
+            <div>{state.title}</div>
+            <div>{state.text}</div>
         </div>
     )
 }

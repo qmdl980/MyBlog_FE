@@ -1,23 +1,32 @@
 import PostCard from '../components/Postcard/PostCard'
-import {Link} from 'react-router-dom'
+import {useNavigate} from "react-router-dom";
 import "../App.css"
-import {propTypes} from 'react-bootstrap/esm/Image'
 
 function Home(props) {
+    const navigate = useNavigate();
 
+    const goBoard = (event, id) => {
+        const state = {
+            title: props.boardData[id - 1].title,
+            text: props.boardData[id - 1].text
+        }
+        navigate(
+            `/${id}`,
+            {state: state}
+        );
+    }
 
     return (
         <div className={"content-wrap"}>
             <div className={"article"}>
                 {props.boardData.map((item) => {
-                    return (<div key={item.idx}
-                                 id={item.idx}
-                                 title={item.title}
-                                 text={item.text}>
-                        <Link to={`/${item.idx}`} style={{marginLeft: "20px", marginTop: "40px"}}>
+                    return (
+                        <div onClick={(e) => goBoard(e, item.idx)}
+                             style={{cursor: 'pointer',marginLeft: "20px", marginTop: "40px"}}
+                             key={item.idx}>
                             <PostCard title={item.title}/>
-                        </Link>
-                    </div>)
+                        </div>
+                    )
                 })}
             </div>
         </div>

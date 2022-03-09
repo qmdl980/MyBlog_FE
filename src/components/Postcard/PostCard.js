@@ -2,6 +2,7 @@ import { Card } from 'react-bootstrap'
 import img from "../../img/cover_img.png"
 
 function PostCard(props) {
+
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={img} />
