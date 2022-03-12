@@ -1,17 +1,35 @@
-import "../App.css"
-import {useLocation} from "react-router-dom";
+import PostCard from '../components/Postcard/PostCard'
+import {useNavigate} from "react-router-dom";
 import "../App.css"
 
 function Board(props) {
+    const navigate = useNavigate();
 
-    const state = useLocation().state
+    const goArticle = (event, id) => {
+        const state = {
+            title: props.boardData[id - 1].title,
+            text: props.boardData[id - 1].text
+        }
+        navigate(
+            `/${id}`,
+            {state: state}
+        );
+    }
 
-
-    return(
+    return (
         <div className={"content-wrap"}>
-            <h1 className="board-title">{state.title}</h1>
-            <div className="board-text">{state.text}</div>
+            <div className={"article"}>
+                {props.boardData.map((item) => (
+                        <div onClick={(e) => goArticle(e, item.idx)}
+                             style={{cursor: 'pointer', marginLeft: "20px", marginTop: "40px"}}
+                             key={item.idx}>
+                            <PostCard title={item.title}/>
+                        </div>
+                    )
+                )}
+            </div>
         </div>
     )
 }
+
 export default Board

@@ -52,12 +52,27 @@
   padding: 0 20px;
 }
 
+.main-content-wrap{
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-content-article{
+  display: flex;
+  max-width: 1080px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  font-family: "one-pop";
+  font-size: 1.5em;
+}
+
+
+
 .article{
   display: flex;
   max-width: 1080px;
   margin: 0 auto;
   flex-wrap: wrap;
-
 }
 
 .container {
@@ -86,4 +101,15 @@
 .board-text{
   font-size:1em;
   font-weight: normal;
+}
+
+.main-content{
+  background-color: #eeeeee;
+
+  height: 30em;
+}
+
+.main-content-division{
+
+  border-bottom: 1px solid #eee;
 }

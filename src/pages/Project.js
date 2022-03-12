@@ -7,7 +7,7 @@ function Project(props) {
 
     const navigate = useNavigate();
 
-    const goBoard = (event, id) => {
+    const goArticle = (event, id) => {
         const state = {
             title: props.boardData[id - 1].title,
             text: props.boardData[id - 1].text
@@ -24,7 +24,7 @@ function Project(props) {
                 {props.boardData.map((item) => {
                     if (item.category === 'project')
                         return (
-                            <div onClick={(e) => goBoard(e, item.idx)}
+                            <div onClick={(e) => goArticle(e, item.idx)}
                                  style={{cursor: 'pointer', marginLeft: "20px", marginTop: "40px"}}
                                  key={item.idx}>
                                 <PostCard title={item.title}/>

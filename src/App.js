@@ -7,6 +7,7 @@ import Board from './pages/Board';
 import JavaScript from "./pages/JavaScript";
 import Layout from './components/Layout';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Article from "./pages/Article";
 
 
 const boardData = [
@@ -43,9 +44,10 @@ function App() {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home boardData={boardData}/>} exact/>
+                    <Route path="/board" element={<Board boardData={boardData}/>} exact/>
                     <Route path="/project" element={<Project boardData={boardData}/>} exact/>
                     <Route path="/javascript" element={<JavaScript boardData={boardData}/>} exact/>
-                    <Route path="/:id" element={<Board/>}/>
+                    <Route path="/:id" element={<Article/>}/>
                 </Routes>
             </Layout>
         </Router>
