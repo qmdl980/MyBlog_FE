@@ -1,6 +1,7 @@
 import PostCard from '../components/Postcard/PostCard'
 import {Link, useNavigate} from 'react-router-dom'
 import "../App.css"
+import Layout from "../components/Layout";
 
 function Project(props) {
 
@@ -21,7 +22,7 @@ function Project(props) {
         <div className={"content-wrap"}>
             <div className={"article"}>
                 {props.boardData.map((item) => {
-                    if(item.category === 'project') {
+                    if (item.category === 'project') {
                         return (
                             <div onClick={(e) => goBoard(e, item.idx)}
                                  style={{cursor: 'pointer', marginLeft: "20px", marginTop: "40px"}}

@@ -1,14 +1,18 @@
 import Header from "./Header/Header"
+import "../App.css"
 
 function Layout(props) {
-    return(
-        <div>
+    console.log(props.children)
+
+    return (
+        <div className="wrap">
             <Header></Header>
-            <div>
+            <section id="container">
                 {props.children}
-            </div>
+            </section>
 
         </div>
     )
 }
+
 export default Layout

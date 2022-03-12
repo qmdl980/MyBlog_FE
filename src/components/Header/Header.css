@@ -1,21 +1,29 @@
 .header{
-    position:relative;
-    max-width: 1080px;
-    margin: 0 auto;
+    border-bottom: 1px solid #eee;
 }
 
 .header-inner{
-    display: flex;
+    position:relative;
     width: 1080px;
-    flex-wrap: wrap;
-    float: left;
-    background-color: aliceblue;
+    margin: 0 auto;
+
+}
+
+.header-title{
+    padding:23px 0;
+    font-family: "one-title";
+    font-size:1.9em;
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
 }
 
 .menu-item {
-    font-family: "one-title";
-    font-size:25px;
+    font-family: "one-pop";
+    font-size: 1.4em;
     text-decoration: none;
+    padding:0 26px;
+    color: black;
 }
 
 .menu-item :hover, :focus, :visited, :link, :active{

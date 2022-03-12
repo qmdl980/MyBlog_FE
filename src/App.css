@@ -55,7 +55,21 @@
 .article{
   display: flex;
   max-width: 1080px;
-  margin: 0 40px;
+  margin: 0 auto;
   flex-wrap: wrap;
-  float: left;
+
+}
+
+.container {
+  position: relative;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.card-title{
+  font-family: "one-pop";
+  font-size:1em;
+  font-weight: normal;
 }
