@@ -2,8 +2,6 @@ import Header from "./Header/Header"
 import "../App.css"
 
 function Layout(props) {
-    console.log(props.children)
-
     return (
         <div className="wrap">
             <Header></Header>

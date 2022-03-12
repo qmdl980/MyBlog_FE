@@ -1,6 +1,6 @@
 import "../App.css"
 import {useLocation} from "react-router-dom";
-import {useState} from "react";
+import "../App.css"
 
 function Board(props) {
 
@@ -9,8 +9,8 @@ function Board(props) {
 
     return(
         <div className={"content-wrap"}>
-            <div>{state.title}</div>
-            <div>{state.text}</div>
+            <h1 className="board-title">{state.title}</h1>
+            <div className="board-text">{state.text}</div>
         </div>
     )
 }

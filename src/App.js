@@ -4,6 +4,7 @@ import './pages/Home'
 import Home from './pages/Home';
 import Project from './pages/Project';
 import Board from './pages/Board';
+import JavaScript from "./pages/JavaScript";
 import Layout from './components/Layout';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
@@ -43,6 +44,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home boardData={boardData}/>} exact/>
                     <Route path="/project" element={<Project boardData={boardData}/>} exact/>
+                    <Route path="/javascript" element={<JavaScript boardData={boardData}/>} exact/>
                     <Route path="/:id" element={<Board/>}/>
                 </Routes>
             </Layout>

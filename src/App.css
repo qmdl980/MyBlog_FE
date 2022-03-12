@@ -73,3 +73,17 @@
   font-size:1em;
   font-weight: normal;
 }
+
+.board-title{
+  font-family: "one-title";
+  font-size:2em;
+  font-weight: normal;
+  margin-top: 30px;
+  padding: 0 20px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.board-text{
+  font-size:1em;
+  font-weight: normal;
+}
