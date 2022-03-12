@@ -1,7 +1,6 @@
 import PostCard from '../components/Postcard/PostCard'
 import {useNavigate} from "react-router-dom";
 import "../App.css"
-import Layout from "../components/Layout";
 
 function Home(props) {
     const navigate = useNavigate();
@@ -20,15 +19,14 @@ function Home(props) {
     return (
         <div className={"content-wrap"}>
             <div className={"article"}>
-                {props.boardData.map((item) => {
-                    return (
+                {props.boardData.map((item) => (
                         <div onClick={(e) => goBoard(e, item.idx)}
                              style={{cursor: 'pointer', marginLeft: "20px", marginTop: "40px"}}
                              key={item.idx}>
                             <PostCard title={item.title}/>
                         </div>
                     )
-                })}
+                )}
             </div>
         </div>
     )
