@@ -1,14 +1,15 @@
 import Header from "./Header/Header"
 import "../App.css"
+import Footer from "./Footer/Footer";
 
 function Layout(props) {
     return (
         <div className="wrap">
-            <Header></Header>
+            <Header/>
             <section id="container">
                 {props.children}
             </section>
-
+            <Footer/>
         </div>
     )
 }
