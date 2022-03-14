@@ -8,7 +8,8 @@ function Board(props) {
     const goArticle = (event, id) => {
         const state = {
             title: props.boardData[id - 1].title,
-            text: props.boardData[id - 1].text
+            text: props.boardData[id - 1].text,
+            date: props.boardData[id - 1].date
         }
         navigate(
             `/${id}`,
@@ -18,7 +19,7 @@ function Board(props) {
 
     return (
         <div className={"content-wrap"}>
-            <div className={"article"}>
+            <div className={"board-wrap"}>
                 {props.boardData.map((item) => (
                         <div onClick={(e) => goArticle(e, item.idx)}
                              style={{cursor: 'pointer', marginLeft: "20px", marginTop: "40px"}}

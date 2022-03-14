@@ -9,7 +9,8 @@ function JavaScript(props) {
     const goBoard = (event, id) => {
         const state = {
             title: props.boardData[id - 1].title,
-            text: props.boardData[id - 1].text
+            text: props.boardData[id - 1].text,
+            date: props.boardData[id - 1].date
         }
         navigate(
             `/${id}`,
@@ -19,7 +20,7 @@ function JavaScript(props) {
 
     return (
         <div className={"content-wrap"}>
-            <div className={"article"}>
+            <div className={"board-wrap"}>
                 {props.boardData.map((item) => {
                     if (item.category === 'javascript') {
                         return (
