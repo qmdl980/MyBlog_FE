@@ -22,7 +22,7 @@ function Home(props) {
 
             </div>
             <div className={"main-content-article"}>
-                <div style={{fontSize:"1.3em", marginTop: "1em", borderLeft:"5px solid #9fbbf6", paddingLeft:"10px"}}>Recently upload</div>
+                <div className={"left-border-title"}>Recently upload</div>
                 <div className={"article"}>
                     {props.boardData.map((item) => (
                             <div onClick={(e) => goArticle(e, item.idx)}
