@@ -38,7 +38,70 @@ const boardData = [
         text: '컴포넌트 만들기',
         category: 'project',
         date: '2022-01-11'
-    }
+    },
+    {
+        idx:5,
+        title: '리액트 프로젝트 3일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:6,
+        title: '리액트 프로젝트 4일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:7,
+        title: '리액트 프로젝트 5일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:8,
+        title: '리액트 프로젝트 6일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:9,
+        title: '리액트 프로젝트 7일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:10,
+        title: '리액트 프로젝트 8일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:11,
+        title: '리액트 프로젝트 9일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:12,
+        title: '리액트 프로젝트 10일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
+    {
+        idx:13,
+        title: '리액트 프로젝트 11일차',
+        text: '컴포넌트 만들기',
+        category: 'project',
+        date: '2022-01-11'
+    },
 ]
 
 function App() {
