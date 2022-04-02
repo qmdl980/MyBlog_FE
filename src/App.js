@@ -104,7 +104,7 @@ const boardData = [
     },
 ]
 
-function App() {
+const App = () => {
     return (
 
         <Router>

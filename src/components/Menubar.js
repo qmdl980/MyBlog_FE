@@ -1,6 +1,6 @@
 
 
-function Menubar() {
+const Menubar = () => {
     return(
         <div>
 

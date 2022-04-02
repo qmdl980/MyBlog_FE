@@ -47,7 +47,7 @@
 }
 
 .content-wrap{
-  max-width: 1080px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -62,20 +62,11 @@
   height: 30em;
 }
 
-.main-content-article{
-  display: flex;
-  max-width: 1080px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  margin-bottom: 3em;
-}
-
 .board-wrap{
-  display: flex;
-  max-width: 1080px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  margin-bottom: 3em;
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 3em;
 }
 
 .container {
@@ -128,6 +119,17 @@
 }
 
 .article-content{
-  max-width: 1080px;
+  max-width: 1140px;
   text-align: left;
+}
+
+.postcard{
+  cursor: pointer;
+  margin: 0.5em auto;
+}
+
+.paging{
+  display: flex;
+  justify-content: center;
+  margin: 3em auto;
 }

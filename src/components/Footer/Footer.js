@@ -1,7 +1,7 @@
 import "./Footer.css"
 import {Link} from 'react-router-dom'
 
-function Footer() {
+const Footer = () => {
     return(
         <div className="footer-wrap">
             <div className="footer-content">
@@ -16,4 +16,5 @@ function Footer() {
 
         </div>
     )
-}export default Footer
+}
+export default Footer

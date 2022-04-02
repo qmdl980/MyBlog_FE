@@ -1,7 +1,7 @@
 import "../App.css"
 import ArticleList from "../components/ArticleList";
 
-function Board(props) {
+const Board = (props) => {
 
     return (
         <div className={"content-wrap"}>

@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import "./Header.css"
 
-function Header() {
+const Header = () => {
     return (
         <div className="header">
             <div className="header-inner">

@@ -1,7 +1,7 @@
 import "../App.css"
 import ArticleList from "../components/ArticleList";
 
-function JavaScript(props) {
+const JavaScript = (props) => {
 
     return (
         <div className={"content-wrap"}>
