@@ -59,7 +59,6 @@
 
 .main-content{
   background-color: #eeeeee;
-
   height: 30em;
 }
 
@@ -68,8 +67,6 @@
   max-width: 1080px;
   margin: 0 auto;
   flex-wrap: wrap;
-  font-family: "one-pop";
-  font-size: 1.5em;
   margin-bottom: 3em;
 }
 
@@ -118,7 +115,8 @@
 }
 
 .left-border-title{
-  font-size: 1.3em;
+  font-family: "one-pop";
+  font-size: 2em;
   margin-top: 1em;
   border-left: 5px solid #9fbbf6;
   padding-left: 10px;
