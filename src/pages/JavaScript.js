@@ -5,7 +5,7 @@ const JavaScript = (props) => {
 
     return (
         <div className={"content-wrap"}>
-            <ArticleList boardData = {props.boardData} category='javascript'/>
+            <ArticleList boardData = {props.boardData} category={'javascript'}/>
         </div>
     )
 }

@@ -5,7 +5,7 @@ const Board = (props) => {
 
     return (
         <div className={"content-wrap"}>
-            <ArticleList boardData={props.boardData}/>
+            <ArticleList boardData = {props.boardData}/>
         </div>
     )
 }

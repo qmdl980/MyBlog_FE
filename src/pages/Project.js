@@ -6,7 +6,7 @@ const Project = (props) => {
 
     return (
         <div className={"content-wrap"}>
-            <ArticleList boardData={props.boardData} category='project'/>
+            <ArticleList boardData = {props.boardData} category={'project'}/>
         </div>
     )
 }

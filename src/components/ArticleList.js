@@ -1,46 +1,38 @@
 import "../App.css"
 import {useEffect, useState} from "react";
-import 'rc-pagination/assets/index.css'
 import PostCard from '../components/Postcard/PostCard'
 import {useNavigate} from "react-router-dom";
 import Pagination from "rc-pagination";
+import 'rc-pagination/assets/index.css'
+import axios from "axios";
 
 const ArticleList = ({boardData, category}) => {
     const navigate = useNavigate();
-    let currentPageData = []
 
-    if (category) {
-        currentPageData = boardData.filter((item) => {
-            return item.category === category
-        })
-    }else{
-        currentPageData = boardData
-    }
     const [posts, setPosts] = useState([])
     const [limit, setLimit] = useState(9)
-    const [count, setCount] = useState(boardData.length)
+    const [count, setCount] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
+    const [currentPageData, setCurrentPageData] = useState([])
     const offset = (currentPage - 1) * limit
-
-    const getData = async () => {
-        setPosts(
-            currentPageData.slice(offset, offset + limit)
-        )
-    }
 
     useEffect(() => {
         getData()
     }, [currentPage])
 
+    const getData = async () => {
+        const response = await axios.get("/api/articles")
+        setCurrentPageData(response.data)
+        setCount(response.data.length)
+        setPosts(
+            response.data.slice(offset, offset + limit)
+        )
+    }
+
+
     const goArticle = (event, id) => {
-        const state = {
-            title: boardData[id - 1].title,
-            text: boardData[id - 1].text,
-            date: boardData[id - 1].date
-        }
         navigate(
-            `/${id}`,
-            {state: state}
+            `/${id}`
         );
     }
 
@@ -48,9 +40,9 @@ const ArticleList = ({boardData, category}) => {
         <>
             <div className={"board-wrap"}>
                 {posts.map((item) => (
-                        <div onClick={(e) => goArticle(e, item.idx)}
+                        <div onClick={(e) => goArticle(e, item.id)}
                              className={"postcard"}
-                             key={item.idx}>
+                             key={item.id}>
                             <PostCard title={item.title} text={item.text}/>
                         </div>
                     )

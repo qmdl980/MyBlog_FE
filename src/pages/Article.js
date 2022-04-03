@@ -1,16 +1,23 @@
 import "../App.css"
-import {useLocation} from "react-router-dom";
-import "../App.css"
+import {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
+import axios from "axios";
 
-const Article = () => {
 
-    const state = useLocation().state
+const Article = (props) => {
 
-    const dateRender = () => {
-        let date = state.date.split('-');
-        return (
-            date[0] + "년 " + date[1] + "월 " + date[2] + "일"
-        )
+    const [article, setArticle] = useState('')
+    const [date, setDate] = useState('')
+    const id = useParams().id
+
+    useEffect(() => {
+        getData(id)
+    }, [])
+
+    const getData = async (id) => {
+        const response = await axios.get(`/api/article/${id}`)
+        setArticle(response.data)
+        setDate(response.data.timestamp.substring(0,10))
     }
 
     return (
@@ -19,13 +26,13 @@ const Article = () => {
                 <div className="article-content">
                     <div className="board-title">
                         <h1 className="left-border-title">
-                            {state.title}
+                            {article.title}
                         </h1>
                         <h6 className="article-date-form">
-                            {dateRender()}
+                            {date}
                         </h6>
                     </div>
-                    <div className="board-text">{state.text}</div>
+                    <div className="board-text">{article.text}</div>
                 </div>
             </center>
         </div>
