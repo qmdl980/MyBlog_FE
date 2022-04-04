@@ -100,6 +100,7 @@
   margin: 3em 0;
   background-color: white;
   border-radius: 15px;
+  white-space: pre-line;
 }
 .date-form{
 
@@ -132,4 +133,25 @@
   display: flex;
   justify-content: center;
   margin: 3em auto;
+}
+
+.add-article-wrap{
+  margin: 50px 0;
+  font-family: one-pop;
+}
+
+.add-article-category{
+  width: 250px;
+}
+
+.add-article-title{
+  margin: 20px 0;
+}
+
+.add-article-text{
+  margin: 50px 0;
+}
+
+.add-article-button{
+  margin: 0 auto;
 }

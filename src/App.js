@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Article from "./pages/Article";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import AddArticle from "./pages/AddArticle";
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
                     <Route path="/project" element={<Project/>} exact/>
                     <Route path="/javascript" element={<JavaScript/>} exact/>
                     <Route path="/:id" element={<Article/>}/>
+                    <Route path="/write" element={<AddArticle/>}/>
                 </Routes>
             </Layout>
         </Router>

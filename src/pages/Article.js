@@ -18,6 +18,7 @@ const Article = (props) => {
         const response = await axios.get(`/api/article/${id}`)
         setArticle(response.data)
         setDate(response.data.timestamp.substring(0,10))
+        console.log(response.data.text)
     }
 
     return (

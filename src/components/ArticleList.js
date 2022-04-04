@@ -7,7 +7,7 @@ import 'rc-pagination/assets/index.css'
 import axios from "axios";
 
 const ArticleList = ({boardData, category}) => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const [posts, setPosts] = useState([])
     const [limit, setLimit] = useState(9)
@@ -22,6 +22,17 @@ const ArticleList = ({boardData, category}) => {
 
     const getData = async () => {
         const response = await axios.get("/api/articles")
+        if(category){
+            const data = response.data.filter((item) => {
+                if(item.category === category){
+                    return item
+                }
+            })
+            setCurrentPageData(data)
+            setCount(data.length)
+            setPosts(data.slice(offset, offset + limit))
+            return
+        }
         setCurrentPageData(response.data)
         setCount(response.data.length)
         setPosts(
@@ -33,7 +44,7 @@ const ArticleList = ({boardData, category}) => {
     const goArticle = (event, id) => {
         navigate(
             `/${id}`
-        );
+        )
     }
 
     return (

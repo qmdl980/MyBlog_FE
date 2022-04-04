@@ -2,6 +2,8 @@ import {Link} from 'react-router-dom'
 import "./Header.css"
 
 const Header = () => {
+
+
     return (
         <div className="header">
             <div className="header-inner">
@@ -13,9 +15,13 @@ const Header = () => {
                     <Link to={"/project"} className='menu-item'>프로젝트</Link>
                     <Link to={"/javascript"} className='menu-item'>자바스크립트</Link>
                 </ul>
+                <Link to={"/write"}>
+                    <img src={require("../../img/add_article.png")}
+                         style={{height: "35px", cursor: "pointer"}}/>
+                </Link>
             </div>
         </div>
-    )
+)
 }
 
 export default Header
