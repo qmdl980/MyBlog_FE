@@ -8,9 +8,8 @@ import JavaScript from "./pages/JavaScript";
 import Layout from './components/Layout';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Article from "./pages/Article";
-import {useEffect, useState} from "react";
-import axios from "axios";
 import AddArticle from "./pages/AddArticle";
+import UpdateArticle from "./pages/UpdateArticle";
 
 const App = () => {
 
@@ -24,6 +23,7 @@ const App = () => {
                     <Route path="/javascript" element={<JavaScript/>} exact/>
                     <Route path="/:id" element={<Article/>}/>
                     <Route path="/write" element={<AddArticle/>}/>
+                    <Route path="/edit/:id" element={<UpdateArticle/>}/>
                 </Routes>
             </Layout>
         </Router>
