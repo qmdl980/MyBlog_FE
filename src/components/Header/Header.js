@@ -13,7 +13,7 @@ const Header = () => {
                 <ul className={"header-menu"}>
                     <Link to={"/board"} className='menu-item'>전체 게시물</Link>
                     <Link to={"/project"} className='menu-item'>프로젝트</Link>
-                    <Link to={"/javascript"} className='menu-item'>자바스크립트</Link>
+                    <Link to={"/info"} className='menu-item'>About ME</Link>
                 </ul>
                 <Link to={"/write"}>
                     <img src={require("../../img/add_article.png")}

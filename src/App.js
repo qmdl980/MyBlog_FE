@@ -10,6 +10,10 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Article from "./pages/Article";
 import AddArticle from "./pages/AddArticle";
 import UpdateArticle from "./pages/UpdateArticle";
+import Info from "./pages/Info";
+import ArticleReact from "./pages/ArticleReact";
+import ArticleNodejs from "./pages/ArticleNodejs";
+import ArticleError from "./pages/ArticleError";
 
 const App = () => {
 
@@ -24,6 +28,10 @@ const App = () => {
                     <Route path="/:id" element={<Article/>}/>
                     <Route path="/write" element={<AddArticle/>}/>
                     <Route path="/edit/:id" element={<UpdateArticle/>}/>
+                    <Route path="/info" element={<Info/>}/>
+                    <Route path="/react" element={<ArticleReact/>}/>
+                    <Route path="/nodejs" element={<ArticleNodejs/>}/>
+                    <Route path="/error" element={<ArticleError/>}/>
                 </Routes>
             </Layout>
         </Router>
