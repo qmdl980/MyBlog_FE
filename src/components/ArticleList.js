@@ -5,15 +5,15 @@ import {useNavigate} from "react-router-dom";
 import Pagination from "rc-pagination";
 import 'rc-pagination/assets/index.css'
 import axios from "axios";
+import Menubar from "./Menubar";
 
-const ArticleList = ({boardData, category}) => {
+const ArticleList = (props) => {
     const navigate = useNavigate()
 
     const [posts, setPosts] = useState([])
-    const [limit, setLimit] = useState(9)
+    const [limit, setLimit] = useState(10)
     const [count, setCount] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
-    const [currentPageData, setCurrentPageData] = useState([])
     const offset = (currentPage - 1) * limit
 
     useEffect(() => {
@@ -22,22 +22,41 @@ const ArticleList = ({boardData, category}) => {
 
     const getData = async () => {
         const response = await axios.get("/api/articles")
-        if(category){
-            const data = response.data.filter((item) => {
-                if(item.category === category){
+        let data = []
+
+        if (props.category === "Project") {
+            data = response.data.filter((item) => {
+                if (!item.is_article) {
                     return item
                 }
-            })
-            setCurrentPageData(data)
+            }).reverse()
+            setCount(data.length)
+            setPosts(data.slice(offset, offset + limit))
+            return
+        } else if (props.category === "Home") {
+            data = response.data.reverse()
+            setCount(data.length)
+            setPosts(data.slice(offset, offset + limit))
+            return
+        } else if (props.category) {
+            data = response.data.filter((item) => {
+                if (item.category === props.category && item.is_article) {
+                    return item
+                }
+            }).reverse()
+            setCount(data.length)
+            setPosts(data.slice(offset, offset + limit))
+            return
+        } else {
+            data = response.data.filter((item) => {
+                if (item.is_article) {
+                    return item
+                }
+            }).reverse()
             setCount(data.length)
             setPosts(data.slice(offset, offset + limit))
             return
         }
-        setCurrentPageData(response.data)
-        setCount(response.data.length)
-        setPosts(
-            response.data.slice(offset, offset + limit)
-        )
     }
 
 
@@ -49,15 +68,18 @@ const ArticleList = ({boardData, category}) => {
 
     return (
         <>
-            <div className={"board-wrap"}>
-                {posts.map((item) => (
-                        <div onClick={(e) => goArticle(e, item.id)}
-                             className={"postcard"}
-                             key={item.id}>
-                            <PostCard title={item.title} text={item.text}/>
-                        </div>
-                    )
-                )}
+            <div className={"article-menu-wrap"}>
+                <div className={"board-wrap"}>
+                    {posts.map((item) => (
+                            <div onClick={(e) => goArticle(e, item.id)}
+                                 className={"postcard"}
+                                 key={item.id}>
+                                <PostCard title={item.title} text={item.text} date={item.timestamp}/>
+                            </div>
+                        )
+                    )}
+                </div>
+                <Menubar/>
             </div>
             <div className={"paging"}>
                 <Pagination total={count}

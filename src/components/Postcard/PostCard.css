@@ -1,4 +1,24 @@
-.card-img{
-    width:100px;
-    height: 180px;
+.post-card{
+    width:22rem;
+    padding: 0.7rem 0.7rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    font-family: "one-pop";
+}
+
+.post-card-img{
+    border-radius: 15px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.card-text{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color:dimgrey;
+    font-size: 0.8em;
 }

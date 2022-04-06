@@ -1,9 +1,9 @@
-
+import "../App.css"
 
 const Menubar = () => {
     return(
-        <div>
-
+        <div className={"menu-bar"}>
+            메뉴바
         </div>
     )
 }

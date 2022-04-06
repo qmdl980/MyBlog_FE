@@ -8,9 +8,11 @@ const Home = (props) => {
             <div className={"main-content"}>
 
             </div>
-            <div className={"content-wrap"}>
-                <div className={"left-border-title"}>Recently upload</div>
-                <ArticleList boardData = {props.boardData}/>
+            <div className={"background"}>
+                <div className={"content-wrap"}>
+                    <div className={"left-border-title"}>Recently upload</div>
+                    <ArticleList category={"Home"}/>
+                </div>
             </div>
         </div>
     )
