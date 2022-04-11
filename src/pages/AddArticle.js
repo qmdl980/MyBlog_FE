@@ -34,12 +34,13 @@ const AddArticle = (props) => {
         const article = {
             category: form.categoryInput.value,
             title: form.titleInput.value,
-            text: form.contentText.value
+            text: form.contentText.value,
+            is_article: form.categoryInput !== 'Project'
         }
-        addArticle(article)
+        writeArticle(article)
     }
 
-    const addArticle = async (article) => {
+    const writeArticle = async (article) => {
         const res = await axios.post('/api/write_article', article)
         navigate(
             '/'

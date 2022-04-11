@@ -11,22 +11,22 @@ const Menubar = () => {
                     카테고리
                 </div>
                 <div className='menu-bar-item'>
-                    <Link to={"/board"} >전체 게시물</Link>
+                    <Link to={"/board"} className='menu-item-text'>전체 게시물</Link>
                 </div>
                 <div className='menu-bar-item'>
-                    <Link to={"/javascript"}>JavaScript</Link>
+                    <Link to={"/javascript"} className='menu-item-text'>JavaScript</Link>
                 </div>
                 <div className='menu-bar-item'>
-                    <Link to={"/react"}>React</Link>
+                    <Link to={"/react"} className='menu-item-text'>React</Link>
                 </div>
                 <div className='menu-bar-item'>
-                    <Link to={"/nodejs"}>Node.JS</Link>
+                    <Link to={"/nodejs"} className='menu-item-text'>Node.JS</Link>
                 </div>
                 <div className='menu-bar-item'>
-                    <Link to={"/error"}>Solve Error</Link>
+                    <Link to={"/error"} className='menu-item-text'>Solve Error</Link>
                 </div>
                 <div className='menu-bar-item'>
-                    <Link to={"/project"}>프로젝트 정보</Link>
+                    <Link to={"/project"} className='menu-item-text'>프로젝트 정보</Link>
                 </div>
             </center>
         </div>

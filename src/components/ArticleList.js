@@ -11,7 +11,7 @@ const ArticleList = (props) => {
     const navigate = useNavigate()
 
     const [posts, setPosts] = useState([])
-    const [limit, setLimit] = useState(10)
+    const [limit, setLimit] = useState(6)
     const [count, setCount] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
     const offset = (currentPage - 1) * limit
