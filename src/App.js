@@ -14,6 +14,7 @@ import Info from "./pages/Info";
 import ArticleReact from "./pages/ArticleReact";
 import ArticleNodejs from "./pages/ArticleNodejs";
 import ArticleError from "./pages/ArticleError";
+import Login from "./pages/Login"
 
 const App = () => {
 
@@ -32,6 +33,8 @@ const App = () => {
                     <Route path="/react" element={<ArticleReact/>}/>
                     <Route path="/nodejs" element={<ArticleNodejs/>}/>
                     <Route path="/error" element={<ArticleError/>}/>
+                    <Route path="/login" element={<Login/>}/>
+
                 </Routes>
             </Layout>
         </Router>
