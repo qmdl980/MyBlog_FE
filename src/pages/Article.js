@@ -19,8 +19,6 @@ const Article = (props) => {
         setDate(response.data.timestamp.substring(0, 10))
     }
 
-
-
     return (
         <div className="article-wrap">
             <center>
